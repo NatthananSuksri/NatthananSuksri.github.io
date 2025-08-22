@@ -3,154 +3,432 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>เมล็ดพันธุ์หญ้าสำหรับวัวชน | ชุมชนบ้านป่าพะยอม จังหวัดพัทลุง</title>
-  <meta name="description" content="จำหน่ายเมล็ดพันธุ์หญ้าคุณภาพสำหรับวัวชนและโคเนื้อ โคนม ส่งตรงจากชุมชนบ้านป่าพะยอม จังหวัดพัทลุง จัดส่งทั่วประเทศ" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta property="og:title" content="เมล็ดพันธุ์หญ้าสำหรับวัวชน – บ้านป่าพะยอม" />
-  <meta property="og:description" content="เมล็ดพันธุ์หญ้าคุณภาพสำหรับฟาร์มวัวชน โคเนื้อ โคนม มีหลายสายพันธุ์ จัดส่งทั่วไทย" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="th_TH" />
-  <meta name="theme-color" content="#0e7a3e" />
+  <title>ชุมชนบ้านป่าพะยอม | ขายหญ้าพันธุ์สำหรับวัวชน พัทลุง</title>
+  <meta name="description" content="จำหน่ายหญ้าพันธุ์คุณภาพสำหรับวัวชน โดยชุมชนบ้านป่าพะยอม จังหวัดพัทลุง สด ใหม่ ส่งไว ยืนหนึ่งเรื่องคุณภาพอาหารวัวชน" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#f7faf7; --card:#ffffff; --ink:#12221a; --muted:#507a63; --brand:#0e7a3e; --brand-2:#35a06b; --line:#e6efe8; --warn:#b45309;
-      --radius:18px; --shadow:0 10px 25px rgba(0,0,0,.06);
+      --bg:#0b2213;        /* เขียวเข้มป่าพะยอม */
+      --bg-soft:#11311b;   /* โทนอ่อน */
+      --pri:#4ade80;       /* เขียวสด */
+      --pri-2:#22c55e;
+      --txt:#eef7ef;       /* ตัวอักษรหลัก */
+      --muted:#bfe6c8;     /* ตัวอักษรรอง */
+      --card:#0f2a18;
+      --accent:#facc15;    /* เหลืองไฮไลท์ */
+      --danger:#ef4444;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,TH Sarabun New,Arial,sans-serif;}
+    html,body{margin:0;padding:0;font-family:"Kanit",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;background:linear-gradient(180deg,var(--bg) 0%, #07170d 100%);color:var(--txt)}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
+    .container{width:min(1200px,92%);margin-inline:auto}
 
-    /* Header */
-    .header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,#ffffffdd,#ffffffcc);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--line)}
-    .wrap{max-width:1100px;margin:auto;padding:0 16px}
-    .row{display:flex;align-items:center;gap:16px}
-    .header .row{justify-content:space-between;height:64px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
-    .logo{width:36px;height:36px;border-radius:12px;background:radial-gradient(60% 80% at 40% 30%,#31c27d 0%,#0e7a3e 70%);display:grid;place-items:center;color:#fff;box-shadow:0 6px 16px rgba(14,122,62,.35)}
-    .brand b{letter-spacing:.3px}
-    nav{display:flex;gap:16px;flex-wrap:wrap}
-    nav a{padding:10px 12px;border-radius:12px}
-    nav a:hover{background:#f0f6f2}
-    .cta{background:var(--brand);color:#fff;padding:10px 14px;border-radius:12px;box-shadow:0 6px 16px rgba(14,122,62,.35)}
+    /* Navbar */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(7,23,13,.7);backdrop-filter:blur(10px);border-bottom:1px solid #1b3b24}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
+    .brand{display:flex;gap:.6rem;align-items:center}
+    .brand-badge{width:40px;height:40px;border-radius:12px;background:radial-gradient(circle at 30% 30%, var(--pri) 0 40%, #0f2a18 60%);display:grid;place-items:center;box-shadow:0 6px 20px rgba(74,222,128,.25)}
+    .brand h1{font-size:1.05rem;margin:0;line-height:1.1}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{opacity:.85}
+    .nav-links a:hover{opacity:1}
+    .btn{border:none;border-radius:14px;padding:.7rem 1rem;background:var(--pri-2);color:#06220f;font-weight:700;cursor:pointer;box-shadow:0 8px 24px rgba(34,197,94,.25);transition:transform .08s ease, box-shadow .2s ease}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 12px 28px rgba(34,197,94,.35)}
+    .btn.secondary{background:#173c24;color:var(--txt);box-shadow:none;border:1px solid #214c2d}
+    .btn.ghost{background:transparent;color:var(--txt);border:1px solid #285b37}
 
     /* Hero */
-    .hero{background:linear-gradient(145deg,#e9f7ef 0%,#f7fbf9 50%,#ffffff 100%);border-bottom:1px solid var(--line)}
-    .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;padding:40px 16px}
-    .badge{display:inline-flex;align-items:center;gap:8px;background:#e6f5ec;color:var(--brand);padding:8px 12px;border-radius:999px;font-weight:650;border:1px solid #cfe8d8}
-    .hero h1{font-size:clamp(26px,2.8vw,40px);margin:12px 0 6px}
-    .hero p{color:var(--muted);margin:0 0 16px}
-    .pill{display:inline-flex;gap:8px;flex-wrap:wrap}
-    .pill a{background:#fff;border:1px solid var(--line);padding:10px 12px;border-radius:999px}
-    .hero-illus{aspect-ratio:4/3;border-radius:22px;background:conic-gradient(from 210deg at 40% 60%, #eafff1, #e4f7ee,#f7fff9,#ffffff);border:1px solid var(--line);box-shadow:var(--shadow);display:grid;place-items:center}
-    .hero-illus .grass{width:80%;height:55%;background:linear-gradient(180deg,#1ea45a,#0e7a3e);border-radius:18px 18px 50% 50%/18px 18px 40% 40%;position:relative;overflow:hidden}
-    .hero-illus .grass:before{content:"";position:absolute;left:-5%;right:-5%;bottom:15%;height:8px;background:#0b6a36;filter:blur(6px);opacity:.4}
+    .hero{position:relative;isolation:isolate}
+    .hero::before{content:"";position:absolute;inset:0;background:
+      radial-gradient(1200px 500px at 10% -10%, rgba(74,222,128,.12), transparent 60%),
+      radial-gradient(800px 400px at 90% 10%, rgba(250,204,21,.12), transparent 60%);
+      z-index:-1}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding:4rem 0 2rem}
+    .headline{font-size:clamp(1.8rem,3vw,3rem);margin:0 0 .5rem;font-weight:800}
+    .subhead{color:var(--muted);font-size:1.05rem;margin:0 0 1.25rem}
+    .badges{display:flex;gap:.6rem;flex-wrap:wrap;margin:.75rem 0 1.25rem}
+    .badge{border:1px solid #245834;background:#0f2a18;color:#c9f8d7;padding:.35rem .6rem;border-radius:999px;font-size:.8rem}
+    .hero-card{background:linear-gradient(180deg,#0e2817, #0a1c11);border:1px solid #1a3f26;border-radius:22px;padding:1rem;box-shadow:inset 0 1px 0 rgba(255,255,255,.05), 0 12px 40px rgba(0,0,0,.25)}
+    .hero-img{aspect-ratio:4/3;border-radius:16px;overflow:hidden;border:1px solid #214c2d;background:linear-gradient(135deg,#133820,#0a1f13)}
+    .hero-img .mock{height:100%;background:
+      linear-gradient(0deg, rgba(0,0,0,.25), rgba(0,0,0,.25)),
+      url('https://images.unsplash.com/photo-1626178793921-4b3329a0d2d9?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;background-position:center}
+    .hero-cta{display:flex;gap:.6rem;flex-wrap:wrap}
 
-    /* Controls */
-    .controls{padding:18px 16px}
-    .controls .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
-    .input, select{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 12px;font:inherit}
-    .input:focus, select:focus{outline:2px solid #bfead3}
-
-    /* Product grid */
-    .section{padding:6px 16px 40px}
-    h2{font-size:clamp(20px,2.2vw,28px)}
-    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:14px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);display:flex;flex-direction:column}
-    .card .media{aspect-ratio:4/3;background:#e8f6ee;border-bottom:1px solid var(--line);border-radius:var(--radius) var(--radius) 0 0;display:grid;place-items:center}
-    .spec{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
-    .spec span{background:#f4faf6;border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:12px}
-    .card .body{padding:14px}
-    .price{display:flex;align-items:center;justify-content:space-between;margin-top:auto;font-weight:800}
+    /* Sections */
+    section{padding:2.2rem 0;border-top:1px solid #143520}
+    section h2{font-size:1.6rem;margin:0 0 .75rem}
     .muted{color:var(--muted)}
-    .qty{display:flex;align-items:center;gap:8px;margin-top:10px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:#fff;cursor:pointer}
-    .btn.primary{background:var(--brand);color:#fff;border-color:transparent}
-    .btn:active{transform:translateY(1px)}
 
-    /* Info blocks */
-    .info{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
-    .info .block{background:#ffffff;border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+    /* Products */
+    .controls{display:flex;gap:.6rem;flex-wrap:wrap;margin:1rem 0}
+    .inp{background:#0a1e12;border:1px solid #214c2d;color:var(--txt);padding:.7rem .9rem;border-radius:12px;outline:none}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+    @media (max-width:1000px){.hero-grid{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){.grid{grid-template-columns:1fr}}
+    .card{background:linear-gradient(180deg,#0d2616,#091a10);border:1px solid #1a3d25;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+    .card img{aspect-ratio:4/3;object-fit:cover}
+    .card .p{padding:1rem}
+    .price{font-weight:800;font-size:1.2rem}
+    .pill{font-size:.8rem;border:1px solid #2a6a3f;background:#0c2214;padding:.25rem .5rem;border-radius:999px;color:#c4f6d2}
+    .row{display:flex;justify-content:space-between;align-items:center;gap:.5rem}
 
-    /* Cart floating panel */
-    .cart-btn{position:fixed;right:16px;bottom:16px;z-index:60;background:var(--brand);color:#fff;border:none;border-radius:999px;padding:14px 18px;box-shadow:0 18px 32px rgba(14,122,62,.35);display:flex;align-items:center;gap:10px;cursor:pointer}
-    .cart-panel{position:fixed;right:16px;bottom:84px;width:min(420px,92vw);max-height:70vh;overflow:auto;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);display:none;flex-direction:column}
-    .cart-panel header{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid var(--line)}
-    .cart-items{padding:6px 14px;display:flex;flex-direction:column;gap:8px}
-    .cart-item{display:grid;grid-template-columns:56px 1fr auto;gap:10px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:8px}
-    .cart-item img{width:56px;height:42px;border-radius:8px;object-fit:cover}
-    .cart-foot{padding:12px 14px;border-top:1px solid var(--line);display:grid;gap:8px}
-    .total{display:flex;justify-content:space-between;font-weight:800}
+    /* Cart */
+    .cart-toggle{position:fixed;right:1rem;bottom:1rem;z-index:60}
+    .cart-drawer{position:fixed;right:0;top:0;bottom:0;width:min(460px,95%);background:#08160d;border-left:1px solid #1a3d25;transform:translateX(110%);transition:transform .25s ease;z-index:70;display:flex;flex-direction:column}
+    .cart-drawer.open{transform:none}
+    .cart-head{display:flex;justify-content:space-between;align-items:center;padding:1rem;border-bottom:1px solid #12361f}
+    .cart-list{padding:1rem;display:flex;flex-direction:column;gap:.75rem;overflow:auto}
+    .cart-item{display:grid;grid-template-columns:64px 1fr auto;gap:.75rem;align-items:center;background:#0b1f13;border:1px solid #153b22;border-radius:12px;padding:.5rem}
+    .cart-foot{margin-top:auto;padding:1rem;border-top:1px solid #12361f;background:#0b1f13}
 
-    /* Contact & Footer */
-    .contact{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
-    .contact form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
-    textarea{min-height:120px;resize:vertical}
-    footer{border-top:1px solid var(--line);padding:20px 16px;color:var(--muted)}
+    /* Info grid */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    @media (max-width:900px){.features{grid-template-columns:1fr}}
+    .feature{background:linear-gradient(180deg,#0d2616,#091a10);border:1px solid #1a3d25;border-radius:18px;padding:1rem}
 
-    /* Responsive */
-    @media (max-width:1024px){
-      .grid{grid-template-columns:repeat(3,1fr)}
-      .hero .wrap{grid-template-columns:1fr}
-      .contact{grid-template-columns:1fr}
-      .info{grid-template-columns:1fr 1fr}
-    }
-    @media (max-width:640px){
-      .grid{grid-template-columns:1fr 1fr}
-      nav{display:none}
-      .info{grid-template-columns:1fr}
-    }
+    /* Footer */
+    footer{padding:2rem 0;border-top:1px solid #143520;color:var(--muted)}
   </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <div class="brand-badge" aria-hidden="true">🌿</div>
+        <h1>บ้านป่าพะยอม • หญ้าพันธุ์วัวชน</h1>
+      </a>
+      <div class="nav-links">
+        <a href="#products">สินค้า</a>
+        <a href="#benefits">ประโยชน์</a>
+        <a href="#faq">คำถามที่พบบ่อย</a>
+        <a href="#contact" class="btn ghost">ติดต่อเรา</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="badge">ชุมชนบ้านป่าพะยอม • อ.ป่าพะยอม จ.พัทลุง</p>
+        <h2 class="headline">หญ้าพันธุ์คุณภาพสำหรับ <span style="color:var(--accent)">วัวชน</span> 
+          โตไว กล้ามแน่น ทนสนาม</h2>
+        <p class="subhead">คัดสายพันธุ์เหมาะกับสภาพอากาศภาคใต้ ปลูกง่าย ผลผลิตสูง ช่วยเสริมโภชนาการให้วัวชนแข็งแรง 
+          พร้อมลุยทุกแมตช์</p>
+        <div class="badges">
+          <span class="badge">งอกไว อัตรางอก &gt; 85%</span>
+          <span class="badge">คัดเกรด • ใหม่สด</span>
+          <span class="badge">เก็บเงินปลายทาง</span>
+          <span class="badge">ส่งทั่วภาคใต้</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#products" class="btn">ดูสินค้าทั้งหมด</a>
+          <button class="btn secondary" id="openCart">ตะกร้าสินค้า</button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-img">
+          <div class="mock" role="img" aria-label="ทุ่งหญ้าเขียว" ></div>
+        </div>
+        <div class="row" style="margin-top:.75rem">
+          <span class="pill">โทรด่วน: <a href="tel:0812345678">081-234-5678</a></span>
+          <span class="pill">LINE: <a href="https://line.me/R/ti/p/~yourlineid" target="_blank" rel="noopener">@yourlineid</a></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Products -->
+  <section id="products">
+    <div class="container">
+      <h2>สินค้าแนะนำ</h2>
+      <p class="muted">เลือกหญ้าพันธุ์ให้เหมาะกับพื้นที่และวัตถุประสงค์การเลี้ยงวัวชนของคุณ</p>
+
+      <div class="controls">
+        <input id="q" class="inp" type="search" placeholder="ค้นหาพันธุ์หญ้า เช่น เนเปียร์ / รูซี่ / แพงโกล่า" />
+        <select id="filterUse" class="inp">
+          <option value="">การใช้งานทั้งหมด</option>
+          <option value="ปลูกตัดสด">ปลูกตัดสด</option>
+          <option value="หมัก/ทำฟาง">หมัก/ทำฟาง</option>
+          <option value="เล็มแทะ">เล็มแทะ</option>
+        </select>
+        <select id="sort" class="inp">
+          <option value="popular">เรียง: แนะนำ</option>
+          <option value="priceAsc">ราคาต่ำไปสูง</option>
+          <option value="priceDesc">ราคาสูงไปต่ำ</option>
+        </select>
+      </div>
+
+      <div class="grid" id="productGrid"></div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section id="benefits">
+    <div class="container">
+      <h2>ทำไมวัวชนต้องกินหญ้าดี?</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>พลังงานพร้อมลุย</h3>
+          <p class="muted">โปรตีนและไฟเบอร์สมดุล ช่วยสร้างกล้ามเนื้อและความอึด ลดโอกาสล้าในสนาม</p>
+        </div>
+        <div class="feature">
+          <h3>โตไว ผลผลิตสูง</h3>
+          <p class="muted">พันธุ์คัดพิเศษสำหรับภาคใต้ โตเร็ว ตัดได้ถี่ ลดต้นทุนอาหารสัตว์ระยะยาว</p>
+        </div>
+        <div class="feature">
+          <h3>ปลอดภัยไร้สารตกค้าง</h3>
+          <p class="muted">เมล็ดใหม่สด เก็บรักษาดี ลดเชื้อรา ปลูกแล้วสบายใจ วัวสุขภาพดี</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <h2>คำถามที่พบบ่อย</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>ปลูกยังไงให้งอกดี?</h3>
+          <p class="muted">ไถพรวนดินให้ร่วนซุย หว่านตื้น ๆ รดน้ำสม่ำเสมอ 7–10 วันเริ่มงอก หลีกเลี่ยงน้ำขัง</p>
+        </div>
+        <div class="feature">
+          <h3>เก็บเงินปลายทางได้ไหม?</h3>
+          <p class="muted">ได้! เรามีบริการเก็บเงินปลายทาง และส่งด่วนในพื้นที่ <strong>อ.ป่าพะยอม จ.พัทลุง</strong> และใกล้เคียง</p>
+        </div>
+        <div class="feature">
+          <h3>ออกใบเสร็จ/สหกรณ์ได้ไหม?</h3>
+          <p class="muted">ติดต่อแอดมินได้เลย เราสามารถออกใบเสร็จและเอกสารประกอบให้สหกรณ์ผู้เลี้ยง</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>ติดต่อชุมชนบ้านป่าพะยอม</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>ช่องทางติดต่อ</h3>
+          <p class="muted">โทร: <a href="tel:0812345678">081-234-5678</a><br>LINE: <a href="https://line.me/R/ti/p/~yourlineid" target="_blank" rel="noopener">@yourlineid</a><br>Facebook: <a href="#" target="_blank" rel="noopener">เพจชุมชนบ้านป่าพะยอม</a></p>
+          <form id="orderForm" style="margin-top:.75rem">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem">
+              <input class="inp" name="name" placeholder="ชื่อผู้สั่ง" required>
+              <input class="inp" name="phone" placeholder="เบอร์โทร" required>
+            </div>
+            <textarea class="inp" name="address" placeholder="ที่อยู่จัดส่ง" rows="3" style="margin-top:.5rem" required></textarea>
+            <div class="row" style="margin-top:.6rem">
+              <button type="submit" class="btn">สั่งซื้อผ่าน LINE</button>
+              <button type="button" id="whatsappBtn" class="btn secondary">สั่งซื้อผ่าน WhatsApp</button>
+            </div>
+          </form>
+        </div>
+        <div class="feature">
+          <h3>แผนที่ร้าน/จุดรับสินค้า</h3>
+          <p class="muted">ตำบลบ้านพร้าว อำเภอป่าพะยอม จังหวัดพัทลุง (ตัวอย่างตำแหน่ง)</p>
+          <div style="border-radius:16px;overflow:hidden;border:1px solid #1a3d25">
+            <iframe title="แผนที่บ้านป่าพะยอม" src="https://www.google.com/maps?q=Ban+Pa+Phayom,Phatthalung,Thailand&output=embed" width="100%" height="280" style="border:0"></iframe>
+          </div>
+        </div>
+        <div class="feature">
+          <h3>เวลาทำการ</h3>
+          <p class="muted">ทุกวัน 08:00–18:00 น.<br>มีบริการจัดส่งในพื้นที่ป่าพะยอม–เมืองพัทลุง และจังหวัดใกล้เคียง</p>
+          <div class="row" style="margin-top:.5rem">
+            <a class="btn" href="tel:0812345678">โทรตอนนี้</a>
+            <a class="btn ghost" href="#products">ดูสินค้า</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <p>© <span id="year"></span> ชุมชนบ้านป่าพะยอม • พัทลุง — ทั้งหมดนี้เพื่อวัวชนที่คุณรัก</p>
+        <div class="row" style="gap:.5rem">
+          <a class="pill" href="#privacy">นโยบายความเป็นส่วนตัว</a>
+          <a class="pill" href="#terms">เงื่อนไขการสั่งซื้อ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <button class="btn cart-toggle" id="cartToggle">ตะกร้า <span id="cartCount">0</span></button>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-head">
+      <strong>ตะกร้าสินค้า</strong>
+      <button class="btn ghost" id="closeCart">ปิด</button>
+    </div>
+    <div class="cart-list" id="cartList"></div>
+    <div class="cart-foot">
+      <div class="row" style="margin-bottom:.6rem">
+        <span>รวมทั้งหมด</span>
+        <strong id="cartTotal">฿0</strong>
+      </div>
+      <div class="row">
+        <button class="btn" id="checkoutLine">ชำระผ่าน LINE</button>
+        <button class="btn secondary" id="checkoutWA">ชำระผ่าน WhatsApp</button>
+      </div>
+    </div>
+  </aside>
+
   <script>
-    // --- Data ---
+    const PHONE_WA = '66812345678'; // เปลี่ยนเป็นเบอร์ WhatsApp ของร้าน (เริ่มด้วย 66)
+    const LINE_TEXT_LINK = 'https://line.me/R/msg/text/?';
+
     const PRODUCTS = [
-      {id:'napier', name:'เมล็ดพันธุ์หญ้าเนเปียร์ (Napier)', price:129, unit:'บ./ขีด', stock:'พร้อมส่ง', seedRate:'1-2 กก./ไร่', days:'45-60 วัน', desc:'โตเร็ว เหมาะสำหรับตัดสดให้วัวชน โปรตีนสูง ใบยาว', img:'#31c27d'},
-      {id:'ruzi', name:'เมล็ดพันธุ์หญ้ารูซี่ (Ruzi)', price:99, unit:'บ./ขีด', stock:'พร้อมส่ง', seedRate:'1.5-2 กก./ไร่', days:'55-70 วัน', desc:'ทนแล้ง เหมาะกับภาคใต้ โครงสร้างใบดี ช่วยเสริมกำลังวัว', img:'#35a06b'},
-      {id:'guinea', name:'เมล็ดพันธุ์หญ้ากินนี (Guinea)', price:139, unit:'บ./ขีด', stock:'พรีออเดอร์', seedRate:'1-1.5 กก./ไร่', days:'50-65 วัน', desc:'รสชาติดี วัวชอบ ให้ผลผลิตต่อไร่สูง', img:'#2e9b77'},
-      {id:'pangola', name:'เมล็ดพันธุ์หญ้าพาซพาลัม/ปางโกล่า', price:149, unit:'บ./ขีด', stock:'พร้อมส่ง', seedRate:'1-1.5 กก./ไร่', days:'60-75 วัน', desc:'ทนเหยียบย่ำ เหมาะทำแปลงซ้อมของวัวชน', img:'#279a63'}
+      { id:'napier', name:'หญ้าเนเปียร์ปากช่อง 1', price:180, unit:'กก.', stock:'มีของ', use:['ปลูกตัดสด','หมัก/ทำฟาง'], protein:'12–16%', img:'https://images.unsplash.com/photo-1598153346810-860daa814c4b?q=80&w=1200&auto=format&fit=crop', popular:1, note:'แทงยอดเร็ว ตัดทุก 45–60 วัน' },
+      { id:'ruzi', name:'หญ้ารูซี่ (Ruzi)', price:150, unit:'กก.', stock:'มีของ', use:['เล็มแทะ','ปลูกตัดสด'], protein:'9–12%', img:'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop', popular:2, note:'ทนแล้งพอควร เหมาะเลี้ยงปล่อย' },
+      { id:'pangola', name:'หญ้าแพงโกล่า', price:220, unit:'กก.', stock:'พรีออเดอร์', use:['ปลูกตัดสด','เล็มแทะ'], protein:'10–14%', img:'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop', popular:3, note:'แตกกอแน่น โปรตีนดี' },
+      { id:'bermuda', name:'หญ้าเบอร์มิวดา', price:200, unit:'กก.', stock:'มีของ', use:['เล็มแทะ','หมัก/ทำฟาง'], protein:'8–12%', img:'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1200&auto=format&fit=crop', popular:4, note:'ทนเหยียบย่ำ ฟื้นตัวไว' },
+      { id:'guinea', name:'หญ้ากินี (Guinea)', price:190, unit:'กก.', stock:'มีของ', use:['ปลูกตัดสด'], protein:'10–14%', img:'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200&auto=format&fit=crop', popular:5, note:'ลำต้นใหญ่ ใบมาก' },
+      { id:'signal', name:'หญ้าสัญญาณ (Signal Grass)', price:170, unit:'กก.', stock:'มีของ', use:['เล็มแทะ'], protein:'9–12%', img:'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop', popular:6, note:'ทนร่ม เฉียบสำหรับแปลงผสม' }
     ];
 
-    let state = {
-      q:'', sort:'popular', cart:{} // cart: {id: qty}
-    };
+    // Utils
+    const baht = n => n.toLocaleString('th-TH', { style:'currency', currency:'THB' });
 
-    document.addEventListener('DOMContentLoaded', () => {
-      renderProducts();
-      renderCart();
-      document.getElementById('q').addEventListener('input', (e)=>{state.q=e.target.value.trim(); renderProducts();})
-      document.getElementById('sort').addEventListener('change', (e)=>{state.sort=e.target.value; renderProducts();})
-      document.getElementById('cartToggle').addEventListener('click', toggleCart);
-      document.getElementById('copyOrder').addEventListener('click', copyOrderText);
-      document.getElementById('genLine').addEventListener('click', openLineOrder);
-      document.getElementById('contactForm').addEventListener('submit', onContact);
-    });
+    // Render products
+    const grid = document.getElementById('productGrid');
+    const q = document.getElementById('q');
+    const filterUse = document.getElementById('filterUse');
+    const sortSel = document.getElementById('sort');
 
     function renderProducts(){
-      let items = PRODUCTS.filter(p => p.name.includes(state.q) || p.desc.includes(state.q));
-      if(state.sort==='price-asc') items.sort((a,b)=>a.price-b.price);
-      if(state.sort==='price-desc') items.sort((a,b)=>b.price-a.price);
-      const grid = document.getElementById('productGrid');
-      grid.innerHTML = '';
-      for(const p of items){
-        const el = document.createElement('article');
-        el.className = 'card';
-        el.innerHTML = `
-          <div class="media">
-            ${placeholderSVG(p.img)}
-          </div>
-          <div class="body">
-            <h3 style="margin:0 0 6px">${p.name}</h3>
-            <div class="spec">
-              <span>อัตราหว่าน ${p.seedRate}</span>
-              <span>เก็บเกี่ยว ${p.days}</span>
-              <span class="muted">${p.stock}</span>
+      const keyword = q.value.trim().toLowerCase();
+      const use = filterUse.value;
+      let data = PRODUCTS.filter(p=>{
+        const matchQ = !keyword || p.name.toLowerCase().includes(keyword);
+        const matchUse = !use || p.use.includes(use);
+        return matchQ && matchUse;
+      });
+      if(sortSel.value==='priceAsc') data.sort((a,b)=>a.price-b.price);
+      else if(sortSel.value==='priceDesc') data.sort((a,b)=>b.price-a.price);
+      else data.sort((a,b)=>a.popular-b.popular);
+
+      grid.innerHTML = data.map(p=>`
+        <article class="card">
+          <img alt="${p.name}" src="${p.img}" loading="lazy" />
+          <div class="p">
+            <div class="row">
+              <h3 style="margin:0">${p.name}</h3>
+              <span class="pill">โปรตีน ${p.protein}</span>
             </div>
-            <p class="muted" style="margin:6px 0 10px">${p.desc}</p>
-            <div class="price">
-              <div>${fmt(p.price)} <span class="muted" style="font-weight:500">/${p.unit}</span></div>
-              <div class="qty">
-                <button class="btn" aria-label="ลด" onclick="chgQty('${p.id}',-1)">–</button>
-                <span id="qty-${p.id}">${state.cart[p.id]||0}</span>
-                <button class="btn" aria-label="เพิ่ม" onclick="chgQty('${p.id}',1)">+</button>
-                <button class="btn primary" onclick="addToCart('${p.id}')">เพิ่มลงตะกร้า</button>
+            <p class="muted" style="margin:.25rem 0 .75rem">${p.note}</p>
+            <div class="row">
+              <div>
+                <div class="price">${baht(p.price)}/${p.unit}</div>
+                <small class="muted">สถานะ: ${p.stock} • การใช้: ${p.use.join(', ')}</small>
               </div>
+              <button class="btn" onclick="addToCart('${p.id}')">เพิ่มลงตะกร้า</button>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    q.addEventListener('input', renderProducts);
+    filterUse.addEventListener('change', renderProducts);
+    sortSel.addEventListener('change', renderProducts);
+
+    // Cart logic
+    const drawer = document.getElementById('cartDrawer');
+    const cartList = document.getElementById('cartList');
+    const cartCount = document.getElementById('cartCount');
+    const cartTotal = document.getElementById('cartTotal');
+    const cartToggle = document.getElementById('cartToggle');
+    const openCartBtn = document.getElementById('openCart');
+    const closeCartBtn = document.getElementById('closeCart');
+
+    let CART = JSON.parse(localStorage.getItem('cowcart')||'{}');
+
+    function saveCart(){ localStorage.setItem('cowcart', JSON.stringify(CART)); updateCartUI(); }
+
+    function addToCart(id){
+      const p = PRODUCTS.find(x=>x.id===id);
+      if(!p) return;
+      CART[id] = CART[id]||{ qty:0, ...p };
+      CART[id].qty += 1;
+      saveCart();
+      drawer.classList.add('open');
+      drawer.setAttribute('aria-hidden','false');
+    }
+    function removeFromCart(id){ delete CART[id]; saveCart(); }
+    function changeQty(id,delta){ if(!CART[id]) return; CART[id].qty = Math.max(1, CART[id].qty+delta); saveCart(); }
+
+    function updateCartUI(){
+      const items = Object.values(CART);
+      const total = items.reduce((s,i)=>s+i.price*i.qty,0);
+      cartCount.textContent = items.reduce((s,i)=>s+i.qty,0);
+      cartTotal.textContent = baht(total);
+      cartList.innerHTML = items.length? items.map(i=>`
+        <div class="cart-item">
+          <img src="${i.img}" alt="${i.name}" />
+          <div>
+            <div class="row"><strong>${i.name}</strong><span class="pill">${baht(i.price)}/${i.unit}</span></div>
+            <div class="row" style="margin-top:.25rem">
+              <div class="row" style="gap:.25rem">
+                <button class="btn ghost" onclick="changeQty('${i.id}',-1)">–</button>
+                <span style="min-width:2ch;text-align:center">${i.qty}</span>
+                <button class="btn ghost" onclick="changeQty('${i.id}',1)">+</button>
+              </div>
+              <button class="btn secondary" onclick="removeFromCart('${i.id}')">ลบ</button>
+            </div>
+          </div>
+          <div><strong>${baht(i.price*i.qty)}</strong></div>
+        </div>
+      `).join('') : '<p class="muted">ตะกร้ายังว่างอยู่ เพิ่มสินค้าจากหน้า "สินค้า" ได้เลย</p>';
+    }
+
+    cartToggle.addEventListener('click',()=>{drawer.classList.toggle('open');drawer.setAttribute('aria-hidden',drawer.classList.contains('open')?'false':'true')});
+    openCartBtn.addEventListener('click',()=>{drawer.classList.add('open');drawer.setAttribute('aria-hidden','false')});
+    closeCartBtn.addEventListener('click',()=>{drawer.classList.remove('open');drawer.setAttribute('aria-hidden','true')});
+
+    // Checkout links
+    function cartText(){
+      const items = Object.values(CART);
+      if(!items.length) return 'ยังไม่มีสินค้าในตะกร้า';
+      const lines = items.map(i=>`• ${i.name} x ${i.qty} = ${i.price*i.qty} บาท`);
+      const total = items.reduce((s,i)=>s+i.price*i.qty,0);
+      return `สั่งซื้อหญ้าพันธุ์วัวชนจากบ้านป่าพะยอม\n${lines.join('\n')}\nรวมทั้งหมด: ${total} บาท`;
+    }
+
+    function openLine(text){
+      const url = LINE_TEXT_LINK + encodeURIComponent(text + '\n\nชื่อ: ' + (orderForm.name.value||'') + '\nโทร: ' + (orderForm.phone.value||'') + '\nที่อยู่: ' + (orderForm.address.value||''));
+      window.open(url, '_blank');
+    }
+    function openWA(text){
+      const url = `https://wa.me/${PHONE_WA}?text=${encodeURIComponent(text + '\n\nชื่อ: ' + (orderForm.name.value||'') + '\nโทร: ' + (orderForm.phone.value||'') + '\nที่อยู่: ' + (orderForm.address.value||''))}`;
+      window.open(url, '_blank');
+    }
+
+    document.getElementById('checkoutLine').addEventListener('click',()=> openLine(cartText()));
+    document.getElementById('checkoutWA').addEventListener('click',()=> openWA(cartText()));
+
+    // Order form actions
+    const orderForm = document.getElementById('orderForm');
+    orderForm.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      openLine(cartText());
+    });
+    document.getElementById('whatsappBtn').addEventListener('click',()=> openWA(cartText()));
+
+    // Misc
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Init
+    renderProducts();
+    updateCartUI();
+  </script>
+</body>
+</html>
